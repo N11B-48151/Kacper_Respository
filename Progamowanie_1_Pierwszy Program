@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) //Wprowadzenie g³ównej zmiennej
+{
+    int a; //Zmienna a
+    int b; // Zmienna b
+    int c; // Zmienna b
+
+    printf("Podaj liczbe A="); //Wyœwietla napis
+    scanf("%d",&a); //Mo¿liwoœæ podania wartoœci dla zmiennej a
+
+    printf("Podaj liczbe B="); //Wyœwietla napis
+    scanf("%d",&b); //Mo¿liwoœæ podania wartoœci dla zmiennej b
+
+    printf("podaj liczbe C="); //Wyœwietla napis
+    scanf("%d",&c); //Mo¿liwoœæ podania wartoœci dla zmiennej c
+
+    int max = a, min = a; //Nowa zmienna max i min, której przypisana jest wartoœæ a dla min i max
+
+	if (max < b)	max = b; //Warunek , zwraca nam b jeœli a siê nie spe³ni
+	if (max < c)	max = c; //Warunek , zwraca nam b jeœli a siê nie spe³ni
+	if (min > b)	min = b; //Warunek , zwraca nam b jeœli a siê nie spe³ni
+	if (min > c)	min = c; //Warunek , zwraca nam b jeœli a siê nie spe³ni
+
+	printf("\n"); //Pusta linia
+	printf("Liczba maksymalna: %d\n", max); //Wyœwietli nam wartoœæ maksymaln¹
+	printf("Liczba minimalna: %d\n", min); //Wyœwietli nam wartoœæ minimaln¹
+	printf("Suma liczb to: %d\n", a + b +c); //Wyœwietli nam sumê zmiennej a,b,c , któr¹ podaliœmy na pocz¹tku
+	printf("\n"); //Pusta linia
+
+	if( ( a < b && a < c ) ) {
+		printf("Liczby uporzadkowane rosnaco: %d", a);
+
+		if ( b < c ) printf(" %d %d", b, c);
+		else printf(" %d %d \n", c, b);
+	}
+	else if( ( b < a && b < c ) ) {
+		printf("%d", b);
+
+		if ( a < c ) printf(" %d %d", a, c);
+		else printf(" %d %d", c, a);
+	} if( ( c < a && b < a ) ) {
+		printf("%d", c);
+
+		if ( a < b ) printf(" %d %d", a, b);
+		else printf(" %d %d", b, a);
+	}
+
+    return (0);
+}
