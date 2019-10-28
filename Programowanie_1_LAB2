@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void menu() {
+	printf("Kalkulator \n");
+    printf("1. Dodawanie \n");
+    printf("2. Odejmowanie \n");
+    printf("3. Mnozenie \n");
+    printf("4. Dzielenie \n");
+    printf("0. Wyjdz \n");
+    printf("\n");
+}
+
+float main()
+{
+	int c;
+	float a, b;
+
+	menu();
+    printf("Wybor: ");
+    scanf("%d", &c);
+
+    switch () {
+		case 0: //Wyjscie
+			printf("\n Do widzenia! \n");
+			break;
+
+		case 1:	//Dodawanie
+			printf("Wprowadz a: ");
+   			scanf("%f", &a);
+
+    		printf("Wprowadz b: ");
+   			scanf("%f", &b);
+
+			printf("\n Wynik dodawania: %f", a + b);
+			break;
+
+		case 2: //Odejmowanie
+			printf("Wprowadz a: ");
+   			scanf("%f", &a);
+
+    		printf("Wprowadz b: ");
+   			scanf("%f", &b);
+
+			printf("\n Wynik odejmowania: %f", a - b);
+			break;
+
+		case 3: //Mnozenie
+			printf("Wprowadz a: ");
+   			scanf("%f", &a);
+
+    		printf("Wprowadz b: ");
+   			scanf("%f", &b);
+
+			printf("\n Wynik Mnozenia: %f", a * b);
+			break;
+
+		case 4: //Dzielenie
+			printf("Wprowadz a: ");
+   			scanf("%f", &a);
+
+    		printf("Wprowadz b: ");
+   			scanf("%f", &b);
+
+			if (b == 0) printf("\n Nie dzielemy przez 0!");
+			else printf("\n Wynik dzielenia: %f", a / b);
+			break;
+	}
+
+    return 0;
+}
