@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 void menu() {
-	printf("Kalkulator \n");
+    printf("Kalkulator \n");
     printf("1. Dodawanie \n");
     printf("2. Odejmowanie \n");
     printf("3. Mnozenie \n");
@@ -20,7 +20,7 @@ float main()
     printf("Wybor: ");
     scanf("%d", &c);
 
-    switch () {
+    switch (c) {
 		case 0: //Wyjscie
 			printf("\n Do widzenia! \n");
 			break;
